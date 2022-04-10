@@ -75,12 +75,11 @@ document.addEventListener('scroll',function(){
 });
 
 // Scroll to anchor ID using scrollTO event
-navBar.addEventListener('click', function moveSmoothely(event)
-                        {
-                            event.preventDefault();
-                            let myHref = event.target.getAttribute('href');
-                            document.querySelector(myHref).scrollIntoView({behavior: 'smooth'});
-                        });
+navBar.addEventListener('click', function moveSmoothely(event){
+    event.preventDefault();
+    let myHref = event.target.getAttribute('href');
+    document.querySelector(myHref).scrollIntoView({behavior: 'smooth'});
+});
 
 
 
