@@ -41,8 +41,8 @@ let navBar = document.querySelector("#navbar__list");
 */
 
 // build the nav
-for(let i = 0 ; i<sections.length ; i++)
-{
+for(let i = 0 ; i<sections.length ; i++){
+
     let item = document.createElement("li");
     let id = sections[i].id;
     let txt = sections[i].getAttribute("data-nav");
@@ -60,11 +60,8 @@ document.addEventListener('scroll',function(){
 
     for(let i = 0 ; i<sections.length; i++){
         let rectangle = sections[i].getBoundingClientRect();
-        if(rectangle.top > 0 && rectangle.bottom>0)
-        {
-            // console.log(`current active section is ${sections[i].id}`);
-            // console.log(rectangle.top);
-
+        if(rectangle.top > 0 && rectangle.bottom>0){
+            
             document.querySelector(activeClassId).classList.remove('your-active-class');
             activeClassId = `#${sections[i].id}`;
             sections[i].classList.add('your-active-class');
@@ -85,8 +82,6 @@ navBar.addEventListener('click', function moveSmoothely(event){
 
 /**
  * End Main Functions
- * Begin Events
- * 
 */
 
 
