@@ -75,6 +75,8 @@ document.addEventListener('scroll',function(){
 navBar.addEventListener('click', function moveSmoothely(event){
     event.preventDefault();
     let myHref = event.target.getAttribute('href');
+    if(myHref === null)
+        myHref = event.target.getElementsByTagName('a')[0].getAttribute('href');
     document.querySelector(myHref).scrollIntoView({behavior: 'smooth'});
 });
 
